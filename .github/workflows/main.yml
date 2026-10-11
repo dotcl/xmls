@@ -18,6 +18,7 @@ jobs:
     runs-on: ${{matrix.os}}
 
     strategy:
+      fail-fast: false
       matrix:
         os: [ubuntu-latest]
         lisp:
@@ -41,7 +42,7 @@ jobs:
     - name: prepare
       uses: snmsts/setup-lisp@dotcl
       with:
-        roswell-version: v26.10.117
+        roswell-version: latest
         asdf-version: 3.3.6
     # - name: Collect prerequisites
     #   shell: bash
