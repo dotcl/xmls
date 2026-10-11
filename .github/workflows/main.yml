@@ -29,7 +29,7 @@ jobs:
           - cmu-bin/21e
           - clisp/2.49
           # - mkcl Tests not implemented on mkcl
-          - abcl/1.9.2
+          - abcl-bin/1.9.2
           - sbcl-bin
           - clisp-head
           - dotcl-bin
