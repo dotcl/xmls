@@ -33,6 +33,11 @@ jobs:
           - sbcl-bin
           - clisp-head
           - dotcl-bin
+        include:
+          - os: macos-latest
+            lisp: dotcl-bin
+          - os: macos-latest
+            lisp: sbcl-bin
 
 
     env:
@@ -42,7 +47,7 @@ jobs:
     - name: prepare
       uses: snmsts/setup-lisp@dotcl
       with:
-        roswell-version: latest
+        roswell-version: v26.10.118
         asdf-version: 3.3.6
     # - name: Collect prerequisites
     #   shell: bash
